@@ -12,11 +12,11 @@
 ```
 
 ### James Destrades Jr.
-**AI Engineer | Systems Builder | Founder**
+**AI Engineer | Systems Builder | Founder — Twilight Tech LLC**
 
+[![Website](https://img.shields.io/badge/twilighttech.io-00f0ff?style=for-the-badge&logoColor=white)](https://twilighttech.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-james--destrades--jr-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/james-destrades-jr)
-[![Website](https://img.shields.io/badge/Twilight_Tech-twilighttech.io-00f0ff?style=for-the-badge&logoColor=white)](https://twilighttech.io)
-[![Email](https://img.shields.io/badge/Email-james@twilighttech.io-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:james@twilighttech.io)
+[![Email](https://img.shields.io/badge/james@twilighttech.io-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:james@twilighttech.io)
 
 </div>
 
@@ -26,102 +26,59 @@
 
 I build **AI systems that run as infrastructure** — not chatbots, not demos. Autonomous platforms with self-healing, multi-agent orchestration, and real-time system awareness. Solo engineer. Ship fast. Test everything.
 
-**Founder of Twilight Tech LLC** — managed IT and cybersecurity for small businesses in Atlanta, GA. J-Bot runs the business while I build J-Bot.
+**Founder of Twilight Tech LLC** — managed IT and cybersecurity for small businesses in Atlanta, GA. My AI runs the business while I build the AI.
 
 ---
 
-## Flagship: J-Bot — AI OS Layer
+## What I'm Building
 
-> *14 body systems. 19 sensors. 103 tool handlers. 3,623 tests. One developer. 14 days.*
+### 🧠 J-Bot — AI OS Layer
 
-J-Bot is an autonomous AI assistant that operates as an OS layer on Windows. It sees processes, network traffic, security events, USB devices, file changes, GPU state, and display configuration. It correlates signals across domains, self-heals crashed components, and hunts threats without being asked.
+An autonomous AI assistant that operates as an **operating-system-level** layer on Windows. Not a chat window. Not a browser extension. A persistent agent that watches the machine, understands context, and acts.
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**Architecture**
-```
-         Twilight Shell (Framework)
-                   |
-           JBotMetaPack (coordinator)
-          /    |      |     \      \
-     HackBot  MSP  Finance  Camera  Project
-```
-
-- 5 domain packs, hot-swappable via entry points
-- Plugin architecture with ABC interfaces
-- FastAPI + WebSocket + REST API
-- SQLite WAL mode, zero cloud dependencies
+**What J-Bot Does**
+- Sees what's happening on the machine in real time — processes, network, security events, file changes, GPU, display, USB
+- Correlates signals across domains (security + system + user activity)
+- Self-heals when components crash
+- Hunts threats without being asked
+- Predicts what's coming (not just what happened)
+- Speaks through multi-channel delivery — voice, toast, Telegram, dashboard
+- Runs as a Windows service, always on
 
 </td>
 <td width="50%" valign="top">
 
-**The Body**
-```
-Blood .... Unified SignalBus + event sourcing
-Heart .... Self-healing watchdog + redundancy
-Brain .... Priority intelligence + optimization
-Muscles .. DAG pipelines + tool forge
-Legs ..... Autonomous goal planning
-Hands .... App control + infrastructure-as-code
-Immune ... Behavioral detection + threat hunting
-DNA ...... Personality evolution + memory
-Eyes ..... Screen reading + visual diffing
-Ears ..... Audio intelligence + sentiment
-Nose ..... Anomaly detection + causal graphs
-Gut ...... Prediction + ensemble models
-Skeleton . Hot-reload + pack generator
-Mouth .... Voice TTS + toast notifications
-```
+**How It Fits In**
+- Two-node distributed system: laptop (Prime) + server (always-on)
+- Plugin architecture — new capabilities drop in as domain packs
+- Deep integrations with Google Workspace, Telegram, Windows APIs
+- FastAPI backend with WebSocket live dashboards
+- Zero cloud dependencies, zero vendor lock-in
+- Powers my MSP + cybersecurity operations end-to-end
 
 </td>
 </tr>
 </table>
 
-### Sensory Network — 19 Live Adapters
+### 🛡️ HackBot — Deployable Security Sentinel
 
-| Layer | Sensors |
-|-------|---------|
-| **System** | Process monitor, network activity, active window, service monitor, startup programs |
-| **Security** | Event log (brute force detection), USB device (mass storage alerts), screen lock, Windows Defender, firewall |
-| **Hardware** | GPU load/temp, hardware inventory, battery/power, display/DPI |
-| **Environment** | File watcher, WiFi, audio, productivity tracker, screenshot capture |
-
-### Two-Node Distributed System
-
-```
-Prime (Laptop) ←——— Tailscale Bridge ———→ Server (Always-On)
-   dev + build          heartbeat            production
-   19 sensors          command relay          24/7 uptime
-   desktop presence    vault sync             API serving
-```
-
-<div align="center">
-
-**[View Repository →](https://github.com/TwilightSage94/j-Bot)**
-
-</div>
-
----
-
-## Specialist: HackBot — Deployable Security Sentinel
-
-> *Purple-team AI agent, forged into a deployable security platform. J-Bot's security-specialist domain pack, now shipping as its own product.*
-
-While J-Bot runs as my AI OS layer, **HackBot** has crossed over into a deployable product. It's a Docker-packaged security sentinel that plugs into a client's network, learns what normal looks like, and responds to anomalies with tiered autonomy.
+Purple-team AI agent, forged into a **deployable security product** for MSPs.
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**What It Does**
+**What HackBot Does**
 - Per-client behavioral baselines — time-aware anomaly detection
 - Tiered autonomous response (AUTO / CONFIRM / MANUAL) with kill switch
 - Attack forecasting — breach risk, CVE exploitation timelines, MITRE kill-chain progression
 - Multi-channel alerting — Email, Slack, Telegram, PagerDuty, custom webhooks
 - Compliance mapping — NIST 800-53, PCI-DSS, HIPAA, SOC 2
-- Self-healing watchdog over every security service
+- Self-monitoring — watches its own security services and self-heals
 
 </td>
 <td width="50%" valign="top">
@@ -137,10 +94,7 @@ Collector Collector Collector
   (Docker)
 ```
 
-- Multi-tenant auth, per-client isolation
-- FastAPI + WebSocket + live operator dashboard
-- SQLite WAL persistence, zero cloud dependencies
-- 511 fusion tests, boring-tech stack on purpose
+Docker-packaged, multi-tenant, one operator monitoring many client networks from a single dashboard.
 
 </td>
 </tr>
@@ -148,26 +102,9 @@ Collector Collector Collector
 
 <div align="center">
 
-**[View HackBot Repository →](https://github.com/TwilightSage94/HackBot)**
+**See it in action: [twilighttech.io/#hackbot](https://twilighttech.io/#hackbot)** — request a pilot or demo
 
 </div>
-
----
-
-## By The Numbers
-
-| Metric | Count |
-|--------|-------|
-| Python files | **739** |
-| Lines of code | **296,000+** |
-| Automated tests | **3,623 (100% pass)** |
-| Tool handlers | **103** |
-| Sensor adapters | **19** |
-| Body systems | **14** |
-| Domain packs | **5** |
-| REST + WS endpoints | **138+** |
-| Build time | **14 days** |
-| Cloud cost | **$0** |
 
 ---
 
@@ -179,7 +116,7 @@ Collector Collector Collector
 ![OpenAI](https://img.shields.io/badge/GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama_Local-000000?style=flat-square&logoColor=white)
 
-ReAct loop, reflexion engine, multi-agent orchestration (parallel, pipeline, debate, race), semantic routing, adaptive prompts, confidence scoring, hallucination detection
+Tool-use agents with reflective loops, multi-agent orchestration, semantic routing, adaptive prompting, confidence scoring, and hallucination detection. Provider failover across Anthropic / OpenAI / local Ollama.
 
 **Backend**
 
@@ -187,15 +124,16 @@ ReAct loop, reflexion engine, multi-agent orchestration (parallel, pipeline, deb
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite_WAL-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![WebSocket](https://img.shields.io/badge/WebSockets-010101?style=flat-square&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-Plugin architecture, entry-point discovery, circuit breakers, provider failover, exponential backoff, context window management, semantic caching
+Plugin architecture with entry-point discovery, async pipelines with retry + circuit breakers, SQLite WAL persistence, multi-tenant auth, and containerized deployment.
 
 **Security**
 
 ![MITRE](https://img.shields.io/badge/MITRE_ATT%26CK-E31837?style=flat-square&logoColor=white)
 ![CompTIA](https://img.shields.io/badge/CompTIA_A+-C8202F?style=flat-square&logoColor=white)
 
-Purple team tooling, compliance frameworks, Windows event log analysis, behavioral threat detection, dark web monitoring
+Purple-team tooling, compliance frameworks (NIST / PCI-DSS / HIPAA / SOC 2), Windows event log analysis, behavioral threat detection, dark-web monitoring, APT attribution.
 
 **Infrastructure**
 
@@ -203,34 +141,50 @@ Purple team tooling, compliance frameworks, Windows event log analysis, behavior
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
 
-Two-node bridge, vault sync, Windows service integration, system tray, global hotkeys, auto-start
+Tailscale mesh networking, Cloudflare Pages + DNS, Stripe payments for product revenue, Windows service integration with system tray + global hotkeys.
 
 ---
 
 ## Also Shipping
 
-| Project | What |
-|---------|------|
-| **[Twilight Tech Website](https://twilighttech.io)** | MSP + cybersecurity services, Cloudflare-hosted |
-| **[CompTIA A+ Study Guides](https://twilighttech.io/guides)** | Complete Core 1 + Core 2 exam prep, selling via Stripe |
-| **J-Bot Origins** | 14-issue comic book series documenting the AI's evolution |
+| Project | Status |
+|---|---|
+| **[Twilight Tech Website](https://twilighttech.io)** | Live — MSP + cybersecurity services, Cloudflare-hosted |
+| **[CompTIA A+ Study Guides](https://twilighttech.io/guides)** | Shipping — Core 1 + Core 2 exam prep via Stripe |
+| **J-Bot Origins** | In progress — comic book series documenting the AI's evolution |
+| **MSP-Bot / Finance Bot / Project Bot / Camera Bot** | Domain packs running in production |
 
 ---
 
 ## Current Focus
 
 ```python
-building   = "J-Bot AI OS Layer — system awareness, always-on presence"
-shipping   = "CompTIA A+ Study Guides via Stripe"
-seeking    = "AI Engineer / ML Platform roles (remote)"
-available  = "Contract work via Twilight Tech LLC"
+building    = "J-Bot AI OS Layer — continuous awareness, proactive operations"
+shipping    = "HackBot pilots for MSPs + CompTIA A+ Study Guides"
+seeking     = "AI Engineer / ML Platform roles (remote)"
+available   = "Contract work, consulting, and pilot partners via Twilight Tech LLC"
 ```
+
+---
+
+## Work With Me
+
+<div align="center">
+
+| | |
+|---|---|
+| **Hire me full-time** | AI Engineer, ML Platform, or Senior Systems roles — [LinkedIn](https://linkedin.com/in/james-destrades-jr) |
+| **Pilot HackBot** | Deploy the security sentinel in your network — [twilighttech.io](https://twilighttech.io/#hackbot) |
+| **Contract / Consulting** | AI engineering, MSP services, custom platforms — [james@twilighttech.io](mailto:james@twilighttech.io) |
+| **Everything else** | [twilighttech.io](https://twilighttech.io) |
+
+</div>
 
 ---
 
 <div align="center">
 
-> *"J-Bot doesn't run on the computer. J-Bot is the computer."*
+> *"I build AI that runs as infrastructure — not chatbots, not demos."*
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=TwilightSage94&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true)](https://github.com/TwilightSage94)
 
