@@ -105,6 +105,55 @@ Prime (Laptop) ←——— Tailscale Bridge ———→ Server (Always-On)
 
 ---
 
+## Specialist: HackBot — Deployable Security Sentinel
+
+> *Purple-team AI agent, forged into a deployable security platform. J-Bot's security-specialist domain pack, now shipping as its own product.*
+
+While J-Bot runs as my AI OS layer, **HackBot** has crossed over into a deployable product. It's a Docker-packaged security sentinel that plugs into a client's network, learns what normal looks like, and responds to anomalies with tiered autonomy.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**What It Does**
+- Per-client behavioral baselines — time-aware anomaly detection
+- Tiered autonomous response (AUTO / CONFIRM / MANUAL) with kill switch
+- Attack forecasting — breach risk, CVE exploitation timelines, MITRE kill-chain progression
+- Multi-channel alerting — Email, Slack, Telegram, PagerDuty, custom webhooks
+- Compliance mapping — NIST 800-53, PCI-DSS, HIPAA, SOC 2
+- Self-healing watchdog over every security service
+
+</td>
+<td width="50%" valign="top">
+
+**How It Ships**
+```
+     HackBot Server (central)
+        ↓ HTTPS + API key
+   ┌────┴────┬─────────┐
+   │         │         │
+Client A  Client B  Client C
+Collector Collector Collector
+  (Docker)
+```
+
+- Multi-tenant auth, per-client isolation
+- FastAPI + WebSocket + live operator dashboard
+- SQLite WAL persistence, zero cloud dependencies
+- 511 fusion tests, boring-tech stack on purpose
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+**[View HackBot Repository →](https://github.com/TwilightSage94/HackBot)**
+
+</div>
+
+---
+
 ## By The Numbers
 
 | Metric | Count |
