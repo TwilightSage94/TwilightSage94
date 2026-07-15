@@ -83,30 +83,40 @@ Voice .... Local STT/TTS — zero egress
 
 ---
 
-## The Privacy Gate — the reason any of this is sellable
+## You Choose Where It Thinks
 
-Cloud models are smart. Client data can't go to them. So J-Bot **de-identifies before egress and rehydrates on the way back** — the provider reasons over `[PERSON_1]` and `[ORG_1]` and never learns who they are.
+One switch. Three answers. Read per call, changeable live without a restart.
+
+| mode | what leaves your building |
+|---|---|
+| 🔒 **Local** | **Nothing. Ever.** Every tier runs on your own GPU. If that box is unreachable it **refuses to answer** — it will not quietly call a vendor instead. |
+| ⚖️ **Hybrid** | Everyday work stays home. Only the hard reasoning goes out — de-identified first (below). |
+| ☁️ **Cloud** | All reasoning outsourced, de-identified first. Fastest, cheapest to run. |
+
+**Local is the product. Fail-closed is the point.** A silent fallback is the worst possible failure for something that promises *"it stays in the building"* — so Local would rather tell you **"I can't"** than get you an answer from someone else's datacenter without asking.
+
+**Voice is Local no matter what you pick** — it never had a cloud mode to fall back to.
+
+---
+
+## The Airlock — for when you *want* frontier reasoning
+
+Sometimes the hard problem is worth a frontier model. That shouldn't cost you your client's name.
+
+So on the way out, identities are replaced with placeholders; on the way back, they're restored locally. The provider reasons over `[PERSON_1]` at `[ORG_1]` about `[MONEY_1]` — and never learns who any of them are.
 
 ```
-"Draft a follow-up to Marcus Delgado at Brightwave Analytics
- (marcus@brightwave.io, 404-555-0182) about the $12,400 retainer."
-                       |
-                       |  scrub — regex + GLiNER, session-keyed EntityMap
-                       v
-"Draft a follow-up to [PERSON_1] at [ORG_1]
- ([EMAIL_1], [PHONE_1]) about the [MONEY_1] retainer."
-                       |
-                       |  the cloud reasons over placeholders
-                       |  rehydrate — locally, exactly
-                       v
-        real names, real numbers, back in your hands
+   your text  ──▶  [ scrub ]  ──▶  cloud reasons over placeholders
+                       │                        │
+                  entity map                    ▼
+                 (stays local)  ◀──────  [ rehydrate ]  ──▶  real answer, real names
 ```
 
-**Measured, not asserted:** a live scrub-quality eval scored **9/10** — anonymized queries produced answers equivalent to the raw baseline, with zero leaks and exact rehydration. The one failure was abstractive summarization paraphrasing the placeholders away; fixed with a directive that forces the tokens through.
+**Measured, not asserted:** a live eval scored **9/10** — de-identified queries produced answers equivalent to the raw baseline, zero leaks, exact restoration. The one failure was summarization paraphrasing the placeholders away, since fixed.
 
-It **fails toward privacy**: an endpoint it can't positively identify as local gets treated as cloud and scrubbed. Loopback, RFC1918, Tailscale CGNAT and `*.ts.net` are the only things it trusts as "inside."
+It **fails toward privacy**: any endpoint it cannot positively prove is inside your network is treated as outside and scrubbed.
 
-**Honest about what it is:** this hides **who**, not **what**. The cloud still sees the *shape* of the work — just never the identities. Probabilistic, not provable. That's the real claim, and it's one you can actually make.
+**And the honest limit:** this hides **who**, not **what**. A frontier model still sees the *shape* of the work — just never the identities. Probabilistic, not provable. If that trade isn't acceptable for a given matter, that's what **Local** is for.
 
 ---
 
@@ -144,20 +154,6 @@ an instance per node                N clients  ->  phone / tablet / desktop, all
 **What it bought:** the deletion of four brains. The guards stayed — belt-and-suspenders, and free — but the topology stopped being a negotiation. Local inference dispatches to the Tower's GPU over the tailnet; Prime's own CPU never runs transformer inference, because that would block the shared event loop everything else lives on.
 
 **What it taught:** the best architecture change is usually the one that removes nodes. Complexity you delete can't drift, can't desync, and can't lie to you at 3am.
-
----
-
-## Provider Routing — Local / Hybrid / Cloud
-
-One switch, read per call, live-flippable without a restart:
-
-| mode | behavior |
-|---|---|
-| **Local** | every tier on your own GPU. **Fails closed** — if the box is unreachable it refuses; it does not quietly call a vendor. |
-| **Hybrid** | light + tool work local; heavy reasoning to the cloud, scrubbed by the gate. |
-| **Cloud** | all cloud, scrubbed. Fastest. The default. |
-
-**Fail-closed is the whole point.** A silent fallback is the worst possible failure for a product whose promise is *"it stays in the building"* — so local mode would rather answer **"I can't"** than answer **"sure"** from someone else's datacenter.
 
 ---
 
