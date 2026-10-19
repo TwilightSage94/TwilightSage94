@@ -1,20 +1,45 @@
 # James Destrades Jr.
 
-I build AI-assisted systems, support tooling, and the infrastructure around them. I'm the founder of [Twilight Tech](https://twilighttech.io) in Atlanta, Georgia.
+**Systems builder · AI engineering · endpoint and support operations**
 
-The part I care about most is what happens *around* the model: useful tools, clear permissions, human approval for consequential actions, and evidence that a workflow actually completed. A green check that measures the wrong thing is worse than a red one.
+Founder, [Twilight Technology](https://twilighttech.io) · Atlanta, Georgia
 
-## What you can inspect
+I started in the part of technology where a broken system interrupts somebody's day: help desk, Microsoft 365, identity, endpoints, and security. That shaped the way I build now. The interface matters, but so do the permissions, failure paths, recovery plan, and proof that a system did what it said it did.
 
-- **[Twilight Tech site](https://github.com/TwilightSage94/twilighttech-site)** — the public code for our website and guided intake. Its [Website Front Desk](https://twilighttech.io/site-chat/) is a live, deterministic visitor flow: it routes questions, collects a bounded inquiry, and hands it to a person. It is not an autonomous agent.
-- **[Twilight Tech Labs](https://twilighttech.io/labs/)** — selected build stories and technical context for the systems behind the work.
+My work spans governed AI, defensive tooling, decision systems, and human-centered products. Much of the underlying code is private. The public [Twilight Tech Labs](https://labs.twilighttech.io/) is the best way to inspect the projects, their engineering decisions, and their current boundaries.
 
-## Work behind the scenes
+## Start with the work
 
-**J-Bot** is my private, ongoing agentic AI engineering project. I use it to explore tool routing, local-first model operation, approval-gated workflows, recovery, and evaluation. Parts of the system have been tested and exercised in a private lab; that is different from claiming every connector or workflow is production-ready. The core repository is private, so the public site and its Front Desk are the inspectable examples here.
+| Project | What it demonstrates | Current boundary |
+| --- | --- | --- |
+| J-Bot | Local-first AI orchestration with tools, memory, model routing, and approval-gated operations | Private system in ongoing hardening; individual workflows have different levels of qualification |
+| HackBot | Defensive security workflows built around scope, permission, evidence, and refusal | Working prototype under validation |
+| The Exchange | Decision tools that separate signals and research from authority to act | Paper research; live execution off |
+| Twilight Academy | Learning experiences with deterministic progression and AI inside explicit teaching boundaries | Functional local prototype |
+| A Place to Show Up | A human-centered mobile product that turns offers of help into specific, claimable support | Private beta and hardening |
+| Tabletop | A playable RPG interface where state and rules remain reliable while the experience stays imaginative | Private deployment and maintenance |
 
-I also work on endpoint and support systems, document workflows, and product experiences. Across those projects, the recurring question is the same: what can the system do reliably, and what should still belong to a human?
+Each Labs room has the same four questions: **why it exists, how it works, what proves it, and where it stops.**
 
-## Get in touch
+### Recent endpoint and service-desk work
 
-[Website](https://twilighttech.io) · [LinkedIn](https://linkedin.com/in/james-destrades-jr) · [Email](mailto:james@twilighttech.io)
+**Rover** is a separate, private enterprise service-desk project. It combines authenticated requester context, reviewed knowledge, bounded ticket handoffs, and auditable policy decisions. Its current reference-enterprise demonstration uses mock receivers; that proves the local contracts, not live integration with a customer's identity or ticketing systems. The first deployment environment is still being qualified.
+
+## One public, working example
+
+The [Website Front Desk](https://twilighttech.io/site-chat/) on the Twilight Technology site is a live guided intake flow. It routes visitors to relevant information, collects a bounded inquiry, and hands it to a person. It is intentionally deterministic—not a claim that a chatbot autonomously runs the business.
+
+The [public site repository](https://github.com/TwilightSage94/twilighttech-site) is an inspectable source snapshot of that work. The live site and Labs continue to evolve; private systems are not published in that repository.
+
+## How I build
+
+1. **Orient:** understand the person, the existing environment, and the actual failure.
+2. **Bound:** decide what a system may know, change, automate, or refuse.
+3. **Build:** connect the interface, state, tools, and infrastructure into a working slice.
+4. **Prove:** test the real workflow, preserve the evidence, and state the remaining edge.
+
+AI can help build and coordinate. People still own consequential decisions, publishing, money, and permissions. A green check that measures the wrong thing is worse than a red one.
+
+I'm interested in work where AI and operational systems have to survive contact with real users, real endpoints, and real constraints.
+
+[Explore the Labs](https://labs.twilighttech.io/) · [Visit Twilight Technology](https://twilighttech.io) · [Connect on LinkedIn](https://linkedin.com/in/james-destrades-jr) · [Email me](mailto:james@twilighttech.io)
