@@ -21,9 +21,13 @@ My work spans governed AI, defensive tooling, decision systems, and human-center
 
 Each Labs room has the same four questions: **why it exists, how it works, what proves it, and where it stops.**
 
-### Recent endpoint and service-desk work
+### Endpoint and AI operations lab
 
-**Rover** is a separate, private enterprise service-desk project. It combines authenticated requester context, reviewed knowledge, bounded ticket handoffs, and auditable policy decisions. Its current reference-enterprise demonstration uses mock receivers; that proves the local contracts, not live integration with a customer's identity or ticketing systems. The first deployment environment is still being qualified.
+- **Rover — the reusable operator.** A private enterprise service-desk system for authenticated requester context, reviewed knowledge, bounded ticket handoffs, and auditable policy decisions. Its reference-enterprise demo currently uses mock receivers; live provider qualification remains separate.
+- **Watchtower — the first support environment.** A private lab for exercising requester guidance, reviewed knowledge, ticket handoff, recovery, and audit behavior. The full model-and-technician workflow is still being qualified; the more immersive Watchtower interface is a design direction, not a shipped product.
+- **Tower — the compute host.** A separate Linux GPU/Ollama machine used for local-model work in the lab. It supplies compute; it does not inherit permission to act on business or service-desk systems.
+
+These are distinct layers: **Tower supplies local inference, Rover defines the governed service-desk operator, and Watchtower gives that work a bounded environment to prove itself.**
 
 ## One public, working example
 
